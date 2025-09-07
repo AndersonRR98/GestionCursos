@@ -17,6 +17,6 @@ class Role extends Model
 
       public function users()
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(User::class , 'rol_id'); // se pone la clave foranea porque laravel no la detecto solo si no la detecta se pone en los dos modelos 
     }
 }

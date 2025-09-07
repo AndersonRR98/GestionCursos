@@ -10,6 +10,8 @@ Route::get('/orm/categories', [OrmController::class, 'categoryRelations']);
 Route::get('/orm/comments', [OrmController::class, 'commentsRelations']);
 Route::get('/orm/lessons', [OrmController::class, 'lessonRelations']);
 Route::get('/orm/payments', [OrmController::class, 'paymentsRelations']);
+Route::get('/orm/roles', [OrmController::class, 'rolesRelations']);
+
 
 // CRUD de courses 
 Route::resource('courses', CourseController::class);
