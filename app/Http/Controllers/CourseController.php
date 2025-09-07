@@ -27,7 +27,7 @@ class CourseController extends Controller
     {
         $validated = $request->validate([
             'titulo' => 'required|string|max:255',
-            'descripcion' => 'nullable|string|max:255',
+            'descripcion' => 'required|string|max:255',
             'precio' => 'required|numeric',
             'instructor_id' => 'required|exists:users,id',
             'category_id' => 'required|exists:categories,id'

@@ -13,10 +13,10 @@
         <input type="text" name="titulo" required><br>
 
         <label for="descripcion">Descripcion:</label>
-        <input type="text" name="descrpcion"><br>
+        <input type="text" name="descripcion"><br>
 
         <label for="precio">Precio:</label>
-        <input type="decimal" name="precio" required><br>      
+        <input type="number" step="0.01" name="precio" required><br>      
 
         <label for="instructor_id">Instructor ID:</label>
         <input type="number" name="instructor_id" required><br>
