@@ -93,6 +93,52 @@ $egresados = Egresado::with(['titulosAcademicos' => function($query){
 
 
 
+consultas examen practica 
+join sql 
+SELECT users.primer_nombre, users.segundo_nombre,
+users.primer_apellido,users.segundo_apellido,
+users.email,users.password,users.activo,
+users.rol_id,roles.nombre,roles.permisos 
+FROM users 
+INNER JOIN roles ON users.rol_id = roles.id;
+
+SELECT * 
+FROM users
+WHERE id = (
+    SELECT id 
+    FROM users
+    WHERE id = 5
+);
+
+
+
+SELECT users.id, users.nombre, users.email,users.password,
+users.activo,users.rol_id, courses.id,courses.titulo,courses.descripcion,
+courses.precio,courses.instructor_id,courses.category_id 
+FROM users 
+INNER JOIN courses 
+ON users.id = courses.instructor_id;
+
+
+
+SELECT users.id, users.nombre, users.email,users.password,
+users.activo,users.rol_id, courses.id,courses.titulo,courses.descripcion,
+courses.precio,courses.instructor_id,courses.category_id 
+FROM users 
+INNER JOIN courses ON users.id = courses.id;
+
+
+
+SELECT users.id, users.nombre, users.email, users.password,
+users.activo,rol_id, roles.id, roles.nombre, roles.permisos
+FROM users 
+INNER JOIN roles ON users.rol_id = roles.id;
+
+
+
+
+
+
 
 
 

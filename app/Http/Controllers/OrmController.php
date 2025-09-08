@@ -6,12 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Role;
 use App\Models\Course;
-use App\Models\Publication;
 use App\Models\Comment;
 use App\Models\Payment;
 use App\Models\Category;
 use App\Models\Lesson;
-use App\Models\ChatSupport;
 
 class OrmController extends Controller
 {
