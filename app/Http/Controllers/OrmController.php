@@ -20,7 +20,7 @@ class OrmController extends Controller
             'role',
             'comments',
             'payments',
-            'course',
+            'courses',
         ])->get();
 
         return response()->json($users);
