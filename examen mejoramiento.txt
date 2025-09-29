@@ -15,3 +15,23 @@ WHERE id = (
     FROM egresado 
     WHERE id = 5
 );
+
+
+SELECT
+courses.id AS course_id,
+courses.titulo,
+courses.descripcion,
+courses.precio,
+categories.id AS category_id,
+categories.nombre
+FROM courses
+INNER JOIN categories 
+ON courses.category_id = categories.id;
+
+SELECT * 
+FROM courses
+WHERE id = (
+    SELECT id 
+    FROM courses
+    WHERE id = 4
+);
