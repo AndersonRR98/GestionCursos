@@ -35,3 +35,25 @@ WHERE id = (
     FROM courses
     WHERE id = 4
 );
+
+
+Filtrar
+SELECT * FROM courses WHERE precio > 15;
+ordenar
+SELECT nombre FROM courses ORDER BY titulo DESC;
+contar registro
+SELECT COUNT(*) FROM courses;
+
+
+iner join con apodos 
+SELECT
+c.id AS course_id,
+c.titulo,
+c.descripcion,
+c.precio,
+c.instructor_id,
+p.id as category_id,
+p.id,
+p.nombre
+FROM courses c
+JOIN categories p ON p.id = c.category_id;
